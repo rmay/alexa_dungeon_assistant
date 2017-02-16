@@ -1,0 +1,24 @@
+RollDiceIntent {Number} d {Sides}
+RollDiceIntent {Number} die {Sides}
+RollDiceIntent {Number} dice {Sides}
+RollDiceIntent {Number} {Sides} sided dice
+RollDiceIntent Roll {Number} d {Sides}
+RollDiceIntent Roll {Number} die {Sides}
+RollDiceIntent Roll {Number} {Sides} sided dice
+RollDiceIntent Roll Dice
+WhatSpellIntent {SpellName}
+WhatSpellIntent Tell me about {SpellName}
+WhatSpellIntent Info {SpellName}
+WhatSpellIntent Look up {SpellName}
+WhatSpellIntent Details on {SpellName}
+WhatSpellIntent Details about {SpellName}
+WhatSpellIntent Describe {SpellName}
+ListSpellsIntent List Spells
+ListSpellsIntent Look Up Spells
+ListSpellsIntent All level {LevelNumber} spells
+ListSpellsIntent List level {LevelNumber} spells
+ListSpellsIntent List {LevelNumber} spells
+ListSpellsIntent List {ClassName} spells
+ListSpellsIntent List {ClassName} {LevelNumber} spells
+ListSpellsIntent List {ClassName} {LevelNumber}
+VersionIntent Version

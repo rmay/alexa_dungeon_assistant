@@ -1,0 +1,51 @@
+{
+  "intents": [
+    {
+      "intent": "RollDiceIntent",
+      "slots": [
+        {
+          "name": "Number",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "Sides",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "WhatSpellIntent",
+      "slots": [
+        {
+          "name": "SpellName",
+          "type": "Spells"
+        }
+      ]
+    },
+    {
+      "intent": "ListSpellsIntent",
+      "slots": [
+        {
+          "name": "ClassName",
+          "type": "Classes"
+        },
+        {
+          "name": "LevelNumber",
+          "type": "Levels"
+        }
+      ]
+    },
+    {
+      "intent": "VersionIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

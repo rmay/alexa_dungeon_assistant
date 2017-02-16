@@ -1,0 +1,32 @@
+{
+  "session": {
+    "sessionId": "SessionId.7e95956f-0305-4031-93a9-750a8f23c8b5",
+    "application": {
+      "applicationId": "amzn1.ask.skill.61389dc7-9e45-4fee-b91b-6fa7270e1070"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEZZL6GOYRAGOPILMZFWHQKLGHKL6A2LHXZI2ZVIGAQS7QX6DFBRFNI47NLLVAQF6EZKUL4HMDUKCSCUPXDP3DCCUVJHG4GO2HPIEMJAGABYFOWRT7CTK3MIEAZUZP3LUIBAVTUVRXV6FRWJR7C3N2O4DQSPG5ONP5JJPJJDMINZJ4QRSEJMGOGHFODQFQLE3OKTA65JLDSZY5Q"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.ea4d4e4d-528d-43dd-8adf-deca9086d94c",
+    "locale": "en-US",
+    "timestamp": "2017-01-18T21:53:27Z",
+    "intent": {
+      "name": "ListSpellsIntent",
+      "slots": {
+        "LevelNumber": {
+          "name": "LevelNumber"
+        },
+        "ClassName": {
+          "name": "ClassName",
+          "value": "Druid"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

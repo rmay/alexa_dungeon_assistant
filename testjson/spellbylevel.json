@@ -1,0 +1,32 @@
+{
+  "session": {
+    "sessionId": "SessionId.34272057-43db-495f-9540-4f0137fb80bd",
+    "application": {
+      "applicationId": "amzn1.ask.skill.61389dc7-9e45-4fee-b91b-6fa7270e1070"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFCDLEXGMX7VMUWSMPZTBZC3N2QQ5VQEWGRNIGEOTIKEEG3EJPJXJ3E2BDAHCDR7S6O5JFZVUNJZ3HZHEP75ZEUUWU2NPJIEZ63EAMC4LS4CJ63MJMRJYYHWFDT73ROIUX6VHQT6XFWB2M4DADUYGIOYKUIVW4DUCYDDPGFBMVAQLWGBOWCOBRAAQIUUEAFPX6PVFMJLJNHPL7Q"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.980250d4-edf7-4dc2-b75a-663409708a01",
+    "locale": "en-US",
+    "timestamp": "2017-02-01T06:12:39Z",
+    "intent": {
+      "name": "ListSpellsIntent",
+      "slots": {
+        "LevelNumber": {
+          "name": "LevelNumber",
+          "value": "2"
+        },
+        "ClassName": {
+          "name": "ClassName"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
