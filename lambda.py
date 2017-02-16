@@ -302,8 +302,7 @@ def get_spells_from_dynamo(intent, session):
 
 def translate_alexa_to_spellbook_terms(spell_name):
     spell_dict = { "Fairy Fire": "Faerie Fire", "Instant Summon": "Drawmij's Instant Summon" }
-    spell_name = spell_dict[spell_name]
-
+    spell_name = spell_dict.get(spell_name, spell_name)
     return spell_name
 
 # --------------- Events ------------------
