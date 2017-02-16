@@ -131,9 +131,7 @@ def roll_dice(intent, session):
 
             speech_output += natural_twenty_output
     except Exception as e:
-        print("roll_dice error:", e)
-        print("Number: " + intent['slots']['Number']['value'])
-        print("Sides: " + intent['slots']['Sides']['value'])
+        print("error roll_dice:", e, "Num:" + intent['slots']['Number']['value'], "Sides:" + intent['slots']['Sides']['value'])
         speech_output = "I'm sorry, I had a problem trying to roll the dice you asked for. Could you repeat that?"
         should_end_session = False
 
@@ -167,8 +165,8 @@ def get_spell_information_from_dynamo(intent, session):
         spell_info = ""
         spell_name = (intent['slots']['SpellName']['value']).title()
 
-        if spell_name == "Fairy Fire":
-            spell_name = "Faerie Fire"
+        spell_name = translate_alexa_to_spellbook_terms(spell_name)
+
         response = spell_book.get_item(
             Key={
                 'spell_name': spell_name
@@ -196,7 +194,7 @@ def get_spell_information_from_dynamo(intent, session):
                      spell_classes
 
     except Exception as e:
-        print("get_spell_info error:", e)
+        print("error get_spell_info:", e, "Spell_name:" + spell_name)
         spell_info = " I couldn't find that spell."
 
     speech_output = spell_name + ". " + spell_info
@@ -291,7 +289,7 @@ def get_spells_from_dynamo(intent, session):
                 spell_list += spell + ".\n "
 
     except Exception as e:
-        print("get_spells error:", e)
+        print("error get_spells:", e)
         spell_list = " I couldn't find that information."
 
 
@@ -302,6 +300,11 @@ def get_spells_from_dynamo(intent, session):
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
 
+def translate_alexa_to_spellbook_terms(spell_name):
+    spell_dict = { "Fairy Fire": "Faerie Fire", "Instant Summon": "Drawmij's Instant Summon" }
+    spell_name = spell_dict[spell_name]
+
+    return spell_name
 
 # --------------- Events ------------------
 
