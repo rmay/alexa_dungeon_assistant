@@ -301,7 +301,7 @@ def get_spells_from_dynamo(intent, session):
         card_title, speech_output, reprompt_text, should_end_session))
 
 def translate_alexa_to_spellbook_terms(spell_name):
-    spell_dict = { "Fairy Fire": "Faerie Fire", "Instant Summon": "Drawmij's Instant Summon" }
+    spell_dict = { "Fairy Fire": "Faerie Fire", "Instant Summon": "Drawmij's Instant Summon", "Cone Of Cold": "Cone of Cold" }
     spell_name = spell_dict.get(spell_name, spell_name)
     return spell_name
 

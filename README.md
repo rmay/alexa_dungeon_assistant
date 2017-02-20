@@ -21,6 +21,12 @@ Add `-v` for more information.
 
 `emulambda lambda.lambda_handler testjson/dicetest2.json -v`
 
+
+**Spell Book Data**
+
+Run `boto3_populate_spells_dynamo.py` insert the spells in `spell.db` into your DynamoDB. The default is to a local instance of DynamoDB.
+
+
 **Requirements**
 
 - Python 2.7
