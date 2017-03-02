@@ -310,8 +310,9 @@ def translate_alexa_to_spellbook_terms(spell_name):
 def on_session_started(session_started_request, session):
     """ Called when the session starts """
 
-    print("on_session_started requestId=" + session_started_request['requestId']
-          + ", sessionId=" + session['sessionId'])
+    #print("on_session_started requestId=" + session_started_request['requestId']
+    #      + ", sessionId=" + session['sessionId'])
+    print("on_session_started")
 
 
 def on_launch(launch_request, session):
@@ -319,8 +320,8 @@ def on_launch(launch_request, session):
     want
     """
 
-    print("on_launch requestId=" + launch_request['requestId'] +
-          ", sessionId=" + session['sessionId'])
+    #print("on_launch requestId=" + launch_request['requestId'] +
+    #      ", sessionId=" + session['sessionId'])
     # Dispatch to your skill's launch
     return get_welcome_response()
 
@@ -328,9 +329,8 @@ def on_launch(launch_request, session):
 def on_intent(intent_request, session):
     """ Called when the user specifies an intent for this skill """
 
-    print("on_intent requestId=" + intent_request['requestId'] +
-          ", sessionId=" + session['sessionId'])
-
+    #print("on_intent requestId=" + intent_request['requestId'] +
+    #      ", sessionId=" + session['sessionId'])
 
     intent = intent_request['intent']
     intent_name = intent_request['intent']['name']
@@ -362,8 +362,8 @@ def on_session_ended(session_ended_request, session):
 
     Is not called when the skill returns should_end_session=true
     """
-    print("on_session_ended requestId=" + session_ended_request['requestId'] +
-          ", sessionId=" + session['sessionId'])
+    #print("on_session_ended requestId=" + session_ended_request['requestId'] +
+    #      ", sessionId=" + session['sessionId'])
     # add cleanup logic here
 
 
@@ -373,8 +373,8 @@ def lambda_handler(event, context):
     """ Route the incoming request based on type (LaunchRequest, IntentRequest,
     etc.) The JSON body of the request is provided in the event parameter.
     """
-    print("event.session.application.applicationId=" +
-          event['session']['application']['applicationId'])
+    #print("event.session.application.applicationId=" +
+    #      event['session']['application']['applicationId'])
 
     """
     Uncomment this if statement and populate with your skill's application ID to
